@@ -9,7 +9,7 @@ public class Main
         int min = -1;
         int max = -1;
         int mid = -1;
-       
+
         if (firstAge >= secondAge && firstAge >= thirdAge)
         {
             max = firstAge;

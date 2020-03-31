@@ -11,21 +11,5 @@ public class Main
         {
             System.out.println("Ticket number is: " + i);
         }
-
-        //============================================================
-        //while
-        int i = 200000;
-        while (i <= 210000)
-        {
-            System.out.println("Ticket number is: " + i);
-            i++;
-        }
-        i = 220000;
-        while (i <= 235000)
-        {
-            System.out.println("Ticket number is: " + i);
-            i++;
-        }
-
     }
 }
