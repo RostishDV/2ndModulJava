@@ -9,47 +9,47 @@ public class Main
         int min = -1;
         int max = -1;
         int mid = -1;
-
-        boolean firstAgeIsSmallest = firstAge <= secondAge && firstAge <=thirdAge;
-        boolean secondAgeIsSmallest = secondAge <= firstAge && secondAge <= thirdAge;
-        if (firstAgeIsSmallest)
+       
+        if (firstAge >= secondAge && firstAge >= thirdAge)
         {
+            max = firstAge;
             if (secondAge >= thirdAge)
             {
-                min = firstAge;
-                mid = thirdAge;
-                max = secondAge;
-            }else
-            {
-                min = firstAge;
                 mid = secondAge;
-                max = thirdAge;
+                min = thirdAge;
             }
-        }else if (secondAgeIsSmallest)
+            else
+            {
+                mid = thirdAge;
+                min = secondAge;
+            }
+        }
+        else if (secondAge >= firstAge && secondAge >= thirdAge)
         {
+            max = secondAge;
             if (firstAge >= thirdAge)
             {
-                min = secondAge;
-                mid = thirdAge;
-                max = firstAge;
-            }else
-            {
-                min = secondAge;
                 mid = firstAge;
-                max = thirdAge;
+                min = thirdAge;
             }
-        }else
+            else
+            {
+                mid = thirdAge;
+                min = firstAge;
+            }
+        }
+        else
         {
+            max = thirdAge;
             if (firstAge >= secondAge)
             {
-                min = thirdAge;
-                mid = secondAge;
-                max = firstAge;
-            }else
-            {
-                min = thirdAge;
                 mid = firstAge;
-                max = secondAge;
+                min = secondAge;
+            }
+            else
+            {
+                mid = secondAge;
+                min = firstAge;
             }
         }
 
