@@ -73,16 +73,14 @@ public class RoadController
             if (weight > passengerCarMaxWeight)
             {
                 price = cargoCarPrice;
-                if (car.hasVehicle) {
-                    price = price + vehicleAdditionalPrice;
-                }
             }
             //Легковой автомобиль
             else {
                 price = passengerCarPrice;
-                if (car.hasVehicle) {
-                    price = price + vehicleAdditionalPrice;
-                }
+
+            }
+            if (car.hasVehicle) {
+                price = price + vehicleAdditionalPrice;
             }
         }
         else {
